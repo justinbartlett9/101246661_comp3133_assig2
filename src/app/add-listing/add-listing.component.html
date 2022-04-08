@@ -1,0 +1,43 @@
+<div class="container">
+  <h1>Add Listing</h1>
+  <form (ngSubmit)="addListing()">
+    <mat-form-field appearance="outline">
+      <label>title</label>
+      <input matInput ngModel name="title" [(ngModel)]="title" />
+    </mat-form-field>
+    <pre></pre>
+    <mat-form-field appearance="outline">
+      <label>description</label>
+      <input
+        matInput
+        ngModel
+        name="description"
+        type="text"
+        [(ngModel)]="description"
+      />
+    </mat-form-field>
+    <pre></pre>
+    <mat-form-field appearance="outline">
+      <label>street</label>
+      <input matInput ngModel name="street" [(ngModel)]="street" />
+    </mat-form-field>
+    <pre></pre>
+    <mat-form-field appearance="outline">
+      <label>city</label>
+      <input matInput ngModel name="city" [(ngModel)]="city" />
+    </mat-form-field>
+    <pre></pre>
+    <mat-form-field appearance="outline">
+      <label>postal code</label>
+      <input matInput ngModel name="postal_code" [(ngModel)]="postal_code" />
+    </mat-form-field>
+    <pre></pre>
+    <mat-form-field appearance="outline">
+      <label>price</label>
+      <input matInput ngModel name="price" type="number" [(ngModel)]="price" />
+    </mat-form-field>
+    <pre></pre>
+
+    <button mat-raised-button type="submit">Add Listing</button>
+  </form>
+</div>

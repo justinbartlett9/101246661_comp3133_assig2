@@ -1,0 +1,41 @@
+<h1>{{ title }}</h1>
+<div *ngIf="user_type === 'admin'">
+  <button mat-raised-button color="accent" (click)="searchListings()">
+    All Listings
+  </button>
+  <button mat-raised-button color="accent" (click)="myListings()">
+    My Listings
+  </button>
+</div>
+<form #search="ngForm" (ngSubmit)="searchListings(search)">
+  <mat-form-field appearance="outline">
+    <label>Search Listings by username, city, postal code</label>
+    <input matInput ngModel name="query" />
+  </mat-form-field>
+  <button mat-raised-button type="submit">Search</button>
+</form>
+<ul>
+  <li *ngFor="let listing of listings">
+    <mat-card>
+      <mat-card-title
+        >{{ listing.listing_title }} - ${{ listing.price }}</mat-card-title
+      >
+      <mat-card-subtitle
+        >{{ listing.street }} {{ listing.city }}
+        {{ listing.postal_code }}</mat-card-subtitle
+      >
+      <mat-card-content>{{ listing.description }}</mat-card-content>
+      <mat-card-actions *ngIf="user_type === 'customer'">
+        <a
+          [routerLink]="['/add/booking/', listing.listing_id]"
+          mat-raised-button
+          color="primary"
+          >book listing</a
+        >
+      </mat-card-actions>
+      <mat-card-footer
+        >Posted by {{ listing.username }} - {{ listing.email }}</mat-card-footer
+      >
+    </mat-card>
+  </li>
+</ul>

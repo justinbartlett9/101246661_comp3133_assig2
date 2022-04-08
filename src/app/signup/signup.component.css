@@ -1,0 +1,12 @@
+input {
+  border: 1px solid black;
+}
+
+.container {
+  text-align: center;
+}
+
+select {
+  color: black;
+  border: 1px solid black;
+}

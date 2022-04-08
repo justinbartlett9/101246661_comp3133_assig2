@@ -1,0 +1,16 @@
+li {
+  padding-bottom: 1em;
+  margin-right: 2em;
+}
+
+ul {
+  list-style: none;
+}
+
+input {
+  border: 1px solid black;
+}
+
+label {
+  color: black;
+}

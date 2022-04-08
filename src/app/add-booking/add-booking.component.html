@@ -1,0 +1,16 @@
+<div class="container">
+  <h1>Add Booking</h1>
+  <form (ngSubmit)="addBooking()">
+    <div appearance="outline">
+      <label>Booking Start Date</label>
+      <input type="datetime-local" ngModel name="start" [(ngModel)]="start" />
+    </div>
+    <pre></pre>
+    <div appearance="outline">
+      <label>Booking End Date</label>
+      <input type="datetime-local" ngModel name="end" [(ngModel)]="end" />
+    </div>
+    <pre></pre>
+    <button mat-raised-button type="submit">Add Booking</button>
+  </form>
+</div>
